@@ -1,0 +1,45 @@
+<div *ngIf="product">
+
+
+    <div class="card_dec p-5"><div class="center ">
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card  inner-card ">
+                <div class="card-body">
+                    <img  class="card-image-top  img_dec mb-4" src="http://localhost:8080/{{product.image}}"/>
+                    <button (click)="cartProduct(product)" class=" my-2 btn btn-cart  btn-primary"><mat-icon >shopping_cart  add to cart</mat-icon></button>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card  crt-info">
+                <div class="card-body ">
+                  <h4 class="card-title font-weight-bold lead">Name</h4>
+                  <p class="card-text">{{product.name}}</p>
+                  <hr>
+
+                  <h4 class="card-title font-weight-bold lead">Pirce</h4>
+                  <p class="card-text">{{product.price}}</p>
+                  <hr>
+
+                  <h4 class="card-title font-weight-bold lead">Model</h4>
+                  <p class="p-0" class="card-text">{{product.model}}</p>
+                  <hr>
+
+                  <h4 class="card-title font-weight-bold lead">Make</h4>
+                  <p class="p-0" class="card-text">{{product.make}}</p>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+
+
+    </div>
+        
+    </div>
+
+

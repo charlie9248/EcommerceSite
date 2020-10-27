@@ -1,0 +1,16 @@
+.logout:hover {
+    cursor: pointer;
+}
+
+.hide{
+    display: none;
+}
+
+.show {
+    display: inline;
+}
+
+
+.btn_logout{
+    float: left;
+}

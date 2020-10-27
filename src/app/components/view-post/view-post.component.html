@@ -1,0 +1,36 @@
+
+    <div class="mt-3" *ngIf="products">
+        <div *ngFor="let product of products">
+            <div class="container text-center">
+                <div class="row my-3  px-4">
+                  <div class=" col-lg-2">
+                    <img
+                    src="http://localhost:8080/{{product.image}}"
+                      alt="loading"
+                      style= "width: 5rem ;height: 5rem; border-radius:10% ; padding : 5px" 
+                    />
+                  </div>
+                  <div  class=" col-lg-2 mt-4">
+                    {{product.name}}
+                  </div>
+                  <div class=" col-lg-2 mt-4">
+                    {{product.type}}
+                  </div>
+                  <div class=" col-lg-2 mt-4">
+                    {{product.model}}
+                  </div>
+                  <div (click)="deleteProduct(product)"   class=" del material-icons col-lg-2 text-danger mt-4"> 
+                    delete_outline
+                  </div>
+                  <div class=" col-lg-2 mt-4">
+                    {{product.price}}
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <div class="mt-3" *ngIf="chepproducts" >
+        <h3 class="font-italic"> You cuurently have not posted anything</h3>
+    </div>
+

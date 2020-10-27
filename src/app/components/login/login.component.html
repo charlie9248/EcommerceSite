@@ -1,0 +1,32 @@
+<div class="parent"></div>
+<form #User="ngForm" class="formdec card"  (ngSubmit) = "User.valid && Submit(User.value)" >
+
+	<div *ngIf="alert">
+		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			 {{message}}
+			<button (click)="colseAlert()" type="button" class="close" data-dismiss="alert" aria-label="Close">
+			  <span aria-hidden="true">&times;</span>
+			</button>
+		  </div>
+	</div>
+
+	<div class="form-group" >
+		<label>email</label>
+		<input required  [ngClass]="{'invalid_text' : User.submitted  && !email.valid}" #email="ngModel" name="email"  [(ngModel)]="Email" class="form-control" type="email" placeholder="enter email"/>
+		<div *ngIf="User.submitted  && !email.valid">
+			<label class="mt-1 text-danger">This field is required</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label>password</label>
+		<input minlength="6" required [ngClass]="{'invalid_text' : User.submitted  && !password.valid}" #password="ngModel" name="password" [(ngModel)]="Password" class="form-control" type="password" placeholder="enter password"/>
+		<div *ngIf="User.submitted  && password.errors">
+			<label *ngIf="password.errors.required" class="mt-1 text-danger">This field is required</label>
+			<label *ngIf="password.errors.minlength" class="mt-1 text-danger">password length greater than 6</label>
+		</div>
+	</div>
+
+
+	<input class=" btn-login btn btn-primary " type="submit" value="Submit">
+</form>

@@ -1,0 +1,8 @@
+.row{
+    background-color: #ebebeb;
+}
+
+
+.del:hover{
+    cursor: pointer;
+}

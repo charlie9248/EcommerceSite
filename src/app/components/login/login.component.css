@@ -1,0 +1,37 @@
+.img{
+    border-radius: 50px;
+}
+
+.parent{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 6%;
+}
+
+.formdec{
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    width: 30%;
+    margin: auto;
+    padding: 50px 100px;
+    border-radius: 20px;
+}
+
+.invalid_text{
+    border-color: red;
+}
+
+
+
+.btndec{
+
+    padding:  5px 80px;
+}
+
+
+.btn-login{
+    width: 56%;
+    margin: auto;
+}

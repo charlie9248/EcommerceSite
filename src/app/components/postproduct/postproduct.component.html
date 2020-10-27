@@ -1,0 +1,41 @@
+<div class="parent"></div>
+<form #Product="ngForm" class="formdec card"  (ngSubmit) = "Submit(Product.value)" >
+	<div style="text-align:center">
+		<div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+		<div><img [src]="url" width="100" height="100" class="img" *ngIf="url"></div>
+		<p>
+			<input class="btn btn-primary btn-sm"  name="image"  type="file" (change)="selectFile($event)">
+		</p>
+	</div>
+
+	
+	<div class="form-group" >
+		<label>name</label>
+		<input #name="ngModel" name="name"  [(ngModel)]="ProductName" class="form-control" type="text" placeholder="enter name"/>
+	</div>
+
+	<div class="form-group" >
+		<label>type</label>
+		<input #type="ngModel" name="type" [(ngModel)]="ProductType" class="form-control" type="text" placeholder="enter type"/>
+	</div>
+
+	<div class="form-group" >
+		<label>price</label>
+		<input #price="ngModel" name="price" [(ngModel)]="ProductPrice" class="form-control" type="number" placeholder="enter price"/>
+	</div>
+
+	<div class="form-group" >
+		<label>model</label>
+		<input #model="ngModel" name="model" [(ngModel)]="ProductModel" class="form-control" type="text" placeholder="enter model"/>
+	</div>
+
+	<div class="form-group" >
+		<label>make</label>
+		<input #make="ngModel" name="make" [(ngModel)]="ProductMake" class="form-control" type="text" placeholder="enter make"/>
+	</div>
+
+
+	<div class="button-group">
+		<input  class="btn btn-secondary btndec" type="submit" value="Submit" />
+	</div>
+</form>
